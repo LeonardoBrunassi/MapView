@@ -11,6 +11,7 @@
 
 @interface ViewController : UIViewController <CLLocationManagerDelegate>
 
+@property MKCoordinateRegion region;
 @property (strong, retain) CLLocationManager *locManager;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 

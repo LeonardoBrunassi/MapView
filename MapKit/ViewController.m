@@ -39,7 +39,7 @@
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
     CLLocationCoordinate2D coord = [[locations lastObject]coordinate];
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coord, 250, 250);
+    _region = MKCoordinateRegionMakeWithDistance(coord, 150, 150);
     NSLog(@"%@", [locations lastObject]);
 }
 
@@ -55,7 +55,7 @@
 }
 
 - (IBAction)atualizaMap:(id)sender {
-    
+    [_mapView setRegion:_region animated:YES];
 }
 
 
