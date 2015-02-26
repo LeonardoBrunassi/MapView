@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <CLLocationManagerDelegate>
 
+@property (strong, retain) CLLocationManager *locManager;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+
+- (IBAction)atualizaMap:(id)sender;
 
 @end
 
